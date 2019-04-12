@@ -25,11 +25,11 @@
     border-bottom: solid var(--color-third) 2px; 
     background: transparent;
 }
-.form-zerfilos .inputBtn::selection {
+.form-zerfilos .inputTxt::selection {
     background-color: var(--color-first);
     color: var(--color-zero);
 }
-.form-zerfilos .inputBtn:focus,
-.form-zerfilos .inputBtn:hover {
+.form-zerfilos .inputTxt:focus,
+.form-zerfilos .inputTxt:hover {
     border-bottom-color: var(--color-first);
 }
