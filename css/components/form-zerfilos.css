@@ -10,7 +10,7 @@
 .form-zerfilos .label:not(:last-of-type) {
     margin-bottom: var(--size-big);
 }
-.form-zerfilos .label:after {
+.form-zerfilos .label::after {
     content: "";
     display: block;
     width: 100%;
@@ -23,9 +23,9 @@
     transition: transform 350ms linear;
 }
 /* -focus caso o navegador não suporte focus-within */
-.form-zerfilos .label:focus-within:after,
-.form-zerfilos .label:hover:after,
-.form-zerfilos .label.-focus:after {
+.form-zerfilos .label:focus-within::after,
+.form-zerfilos .label:hover::after,
+.form-zerfilos .label.-focus::after {
     transform: scaleX(1);
 }
 
@@ -46,6 +46,7 @@
 
 .form-zerfilos .inputTxt {
     width: 100%;
+    margin-bottom: var(--size-huge);
     display: block;
     height: 2em;
     font-weight: bold;
@@ -53,6 +54,25 @@
     background: transparent;
 }
 .form-zerfilos .inputTxt::selection {
+    background-color: var(--color-first);
+    color: var(--color-zero);
+}
+
+.form-zerfilos .checkBoxes .inputBox {
+    display: none;
+}
+
+.form-zerfilos .checkBoxes .labelBox {
+    font-size: 18px;
+    padding: 8px;
+    background-color: var(--color-third-light);
+    cursor: pointer;
+}
+.form-zerfilos .checkBoxes .labelBox::selection{
+    background-color: transparent;
+}
+
+.form-zerfilos .checkBoxes .inputBox:checked + .labelBox {
     background-color: var(--color-first);
     color: var(--color-zero);
 }
