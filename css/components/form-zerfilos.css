@@ -1,0 +1,13 @@
+.form-zerfilos .title {
+    font-size: var(--size-big);
+    display: block;
+    text-align: center;
+}
+
+.form-zerfilos .subtitle {
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    color: var(--color-first);
+    font-weight: bold;
+}
