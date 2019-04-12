@@ -1,13 +1,35 @@
+.form-zerfilos {
+    width: 80vw;
+}
+
 .form-zerfilos .title {
-    font-size: var(--size-big);
     display: block;
     text-align: center;
+    margin-bottom: 6px;
 }
 
 .form-zerfilos .subtitle {
     font-size: 14px;
     display: block;
+    font-weight: bold;
     text-align: center;
     color: var(--color-first);
+    margin-bottom: var(--size-big);
+}
+
+.form-zerfilos .inputBtn {
+    width: 100%;
+    display: block;
+    height: 2em;
     font-weight: bold;
+    border-bottom: solid var(--color-third) 2px; 
+    background: transparent;
+}
+.form-zerfilos .inputBtn::selection {
+    background-color: var(--color-first);
+    color: var(--color-zero);
+}
+.form-zerfilos .inputBtn:focus,
+.form-zerfilos .inputBtn:hover {
+    border-bottom-color: var(--color-first);
 }
