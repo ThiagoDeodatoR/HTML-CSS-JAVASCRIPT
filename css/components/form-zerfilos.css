@@ -20,10 +20,12 @@
     left: 0;
     background-color: var(--color-first);
     transform: scaleX(0);
-    transition: transform 300ms linear;
+    transition: transform 350ms linear;
 }
+/* -focus caso o navegador não suporte focus-within */
 .form-zerfilos .label:focus-within:after,
-.form-zerfilos .label:hover:after {
+.form-zerfilos .label:hover:after,
+.form-zerfilos .label.-focus:after {
     transform: scaleX(1);
 }
 
