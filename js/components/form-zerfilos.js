@@ -23,14 +23,16 @@ function focusAndBlur() {
     $label.classList.toggle("-focus");
 }
 
-$formZerfilos.addEventListener('submit', event => event.preventDefault() ); 
+$formZerfilos.addEventListener('submit', event => event.preventDefault()); 
 
 $inputTxt.addEventListener("keyup", event => {
 
     if(event.key.toUpperCase() === "ENTER" || event.keyCode === 13){ // 13 sendo Enter em numérico
         const value = $inputTxt.value;
-        $checkBoxes.appendChild(newTag(value));
+        if(value != ""){
+            $checkBoxes.appendChild(newTag(value));
 
-        $inputTxt.value = "";
+            $inputTxt.value = "";
+        }
     }
 });
