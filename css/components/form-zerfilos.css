@@ -73,7 +73,6 @@
 .form-zerfilos .checkBoxes .labelBox::selection{
     background-color: transparent;
 }
-
 .form-zerfilos .checkBoxes .inputBox:checked + .labelBox {
     background-color: var(--color-first);
     color: var(--color-zero);
