@@ -63,10 +63,12 @@
 }
 
 .form-zerfilos .checkBoxes .labelBox {
+    display: inline-block;
     font-size: 18px;
     padding: 8px;
     background-color: var(--color-third-light);
     cursor: pointer;
+    animation: vibrationOut 500ms linear; 
 }
 .form-zerfilos .checkBoxes .labelBox::selection{
     background-color: transparent;
@@ -75,4 +77,17 @@
 .form-zerfilos .checkBoxes .inputBox:checked + .labelBox {
     background-color: var(--color-first);
     color: var(--color-zero);
+    animation: vibrationIn 500ms linear;
+}
+
+@keyframes vibrationIn {
+    33%{ transform: rotate(10deg); }
+    66%{ transform: rotate(-10deg); }
+    100% { transform: rotate(0); }
+}
+
+@keyframes vibrationOut {
+    33%{ transform: rotate(-10deg); }
+    66%{ transform: rotate(10deg); }
+    100% { transform: rotate(0); }
 }
