@@ -58,6 +58,15 @@
     color: var(--color-zero);
 }
 
+.form-zerfilos .checkBoxes .wraper {
+    position: relative;
+    margin-right: var(--size-small);
+    transition: opacity 300ms linear;
+}
+.form-zerfilos .checkBoxes .wraper.-remove {
+    opacity: 0;
+}
+
 .form-zerfilos .checkBoxes .inputBox {
     display: none;
 }
@@ -70,13 +79,38 @@
     cursor: pointer;
     animation: vibrationOut 500ms linear; 
 }
-.form-zerfilos .checkBoxes .labelBox::selection{
+.form-zerfilos .checkBoxes .labelBox::selection {
     background-color: transparent;
 }
 .form-zerfilos .checkBoxes .inputBox:checked + .labelBox {
     background-color: var(--color-first);
     color: var(--color-zero);
     animation: vibrationIn 500ms linear;
+}
+
+.form-zerfilos .checkBoxes .wraper .remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    padding: 1px;
+    text-align: center;
+    line-height: 18px;
+    background-color: var(--color-third);
+    color: var(--color-zero);
+    transform: translateY(-50%);
+    font-size: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 100ms linear;
+}
+.form-zerfilos .checkBoxes .wraper .remove:hover,
+.form-zerfilos .checkBoxes .wraper .remove:focus{
+    transform: translateY(-50%) scale(1.2);
+}
+.form-zerfilos .checkBoxes .wraper .remove::selection {
+    background-color: transparent;
 }
 
 @keyframes vibrationIn {

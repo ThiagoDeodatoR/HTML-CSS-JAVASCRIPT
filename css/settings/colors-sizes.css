@@ -5,6 +5,8 @@
     --color-third: #3a4042;
     --color-third-light: rgba(58, 64, 66, 0.4);
 
+    
+    --size-small: 10px;
     --size-big: 30px;
     --size-huge: 45px;
 }
