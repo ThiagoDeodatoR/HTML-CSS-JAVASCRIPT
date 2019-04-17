@@ -4,7 +4,8 @@ const $formZerfilos = document.querySelector(".form-zerfilos");
 const $label = $formZerfilos.querySelector(".label");
 const $inputTxt = $formZerfilos.querySelector(".inputTxt");
 const $checkBoxes = $formZerfilos.querySelector(".checkBoxes");
-//const $wraper = $formZerfilos.querySelector(".wraper");
+const $wraper = $formZerfilos.querySelector(".wraper");
+const $checkbox = $formZerfilos.querySelector(".inputBox");
 
 const newTag = value => {
     const $tag = document.createElement("span");
@@ -26,11 +27,20 @@ function focusAndBlur() {
     $label.classList.toggle("-focus");
 }
 
-/*$wraper.addEventListener("change" , shake);
+$wraper.addEventListener("change" , shake);
 
 function shake (){
-    $wraper.classList.add("-shake");
-}*/
+    if($checkbox.checked) {
+        console.log("checked");
+        $wraper.classList.remove("-vibrationOut");
+        $wraper.classList.add("-vibrationIn");
+    }
+    else {
+        console.log("notchecked");
+        $wraper.classList.remove("-vibrationIn");
+        $wraper.classList.add("-vibrationOut");
+    }
+}
 
 $formZerfilos.addEventListener('submit', event => event.preventDefault()); 
 
