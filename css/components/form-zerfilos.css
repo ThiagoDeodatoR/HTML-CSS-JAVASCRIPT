@@ -58,9 +58,12 @@
     color: var(--color-zero);
 }
 
+.form-zerfilos .checkBoxes {
+    display: flex;
+}
+
 .form-zerfilos .checkBoxes .wraper {
     position: relative;
-    display: inline-block;
     margin-right: var(--size-small);
     transition: opacity 300ms linear;
 }
