@@ -4,8 +4,6 @@ const $formZerfilos = document.querySelector(".form-zerfilos");
 const $label = $formZerfilos.querySelector(".label");
 const $inputTxt = $formZerfilos.querySelector(".inputTxt");
 const $checkBoxes = $formZerfilos.querySelector(".checkBoxes");
-const $wraper = $formZerfilos.querySelector(".wraper");
-const $checkbox = $formZerfilos.querySelector(".inputBox");
 
 const newTag = value => {
     const $tag = document.createElement("span");
@@ -25,21 +23,6 @@ $inputTxt.addEventListener("blur", focusAndBlur);
 
 function focusAndBlur() {
     $label.classList.toggle("-focus");
-}
-
-$wraper.addEventListener("change" , shake);
-
-function shake (){
-    if($checkbox.checked) {
-        console.log("checked");
-        $wraper.classList.remove("-vibrationOut");
-        $wraper.classList.add("-vibrationIn");
-    }
-    else {
-        console.log("notchecked");
-        $wraper.classList.remove("-vibrationIn");
-        $wraper.classList.add("-vibrationOut");
-    }
 }
 
 $formZerfilos.addEventListener('submit', event => event.preventDefault()); 
@@ -64,5 +47,22 @@ $checkBoxes.addEventListener("click" , event => {
 
         removeWraper.classList.add("-remove");
         removeWraper.addEventListener("transitionend" , () => removeWraper.remove());
+    }
+});
+
+$checkBoxes.addEventListener("change" , event => {
+    const {target} = event;
+
+    if (target.classList.contains("inputBox")) {
+        const $wraper = target.closest(".wraper");
+
+        if(target.checked) {
+            $wraper.classList.remove("-vibrationOut");
+            $wraper.classList.add("-vibrationIn");
+        }
+        else {
+            $wraper.classList.remove("-vibrationIn");
+            $wraper.classList.add("-vibrationOut");
+        }
     }
 });
