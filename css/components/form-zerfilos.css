@@ -60,11 +60,12 @@
 
 .form-zerfilos .checkBoxes {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .form-zerfilos .checkBoxes .wraper {
     position: relative;
-    margin-right: var(--size-small);
+    margin: 0 var(--size-small) var(--size-small) 0;
     transition: opacity 300ms linear;
 }
 .form-zerfilos .checkBoxes .wraper.-vibrationIn {
